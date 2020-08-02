@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+	
+<head>
+
+<style type="text/css">
+    
+
+
+
+
+
+.wec {
+  width: 300px;
+  height: 100px;
+  margin-left: 590px;
+  text-shadow: 0 3px gray;
+  position: relative;
+  animation: myfirst 4s linear 2s infinite alternate;
+}
+
+@keyframes myfirst {
+  0%   {color:red; left:0px; top:0px;}
+  25%  {color:yellow; left:40px; top:0px;}
+  50%  {color:blue; left:-40px; top:0px;}
+  75%  {color:green; left:60px; top:0px;}
+  100% {color:red; left:0px; top:0px;}
+}
+
+.left
+{
+     position: absolute;
+}
+
+
+
+#st
+{
+     margin-left: 4px;
+     background-image: url("img/cartback5.jpg");
+     height:500px;
+     width: 670px;
+}
+
+#st:hover,#st1:hover
+{
+     font-size: 70px;
+     font-style: italic;
+     color: brown;
+}
+
+
+#st1
+{
+     background-image: url("img/marionew.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+     height:500px;
+     width: 670px;
+}
+
+
+
+.strt
+{
+
+     height: 100px;
+     width: 200px;
+}
+
+.b1
+{
+     margin-left: 585px;
+     margin-top: 90px;
+     height: 50px;
+     width: 250px;
+}
+
+.b2
+{
+     margin-left: 585px;
+     margin-top: 60px;
+     height: 50px;
+     width: 250px;
+}
+
+
+body
+{
+     
+     background-image: url("img/bacwhole.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+#vid1
+{
+display:none;
+margin-left: 300px;
+}
+
+
+
+#life,#brick,#paddle,#ball,#rd1,#rd2,#backnew,#wbrick,#mainback,#ybrick,#bbrick,#gbrick,#blbrick,#back1
+{
+     display: none;
+}
+
+#myCanvas
+{
+     background-image: url("img/cartback1.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+     margin-left: 270px;
+     
+          
+     
+}
+
+#pus,#bk,#j,#d,#wc,#e,#m,#h,#bar,#dn,#barcv,#myCanvas,#sidenav,#brblock,#E,#M,#H,#res,#mainback1,#wec
+{
+display:none;
+}
+
+
+button,input {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px gray;
+}
+
+.bt
+{
+     margin-top: 20px;
+}
+
+
+.sidenav 
+{
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  text-shadow:0 4px gray;
+}
+
+.sidenav a 
+{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color:white;
+  font-weight: bolder;
+  display: block;
+  margin-left: 20px;
+}
+
+.sidenav a:hover 
+{
+  color: #f1f1f1;
+}
+
+#bk 
+{
+     font-size: 14px;   
+  margin-top: 560px;
+  height: 40px;
+  width: 200px;
+  
+}
+
+#bk1 
+{
+     font-size: 14px;
+     margin-left: 615px;
+     margin-top: -1px;   
+  display: none;
+  height: 40px;
+  width: 200px;
+  
+}
+
+.progress
+{
+     width: 400px;
+     margin-top: 237px;
+     margin-left: 100px;
+     display: none;
+     background-color:white;
+     
+}
+
+
+
+
+
+
+#barcv
+{
+     
+     height: 90px;
+     margin-left: 367px;
+     margin-top: 237px;
+     display: none;
+      width: 250px;     
+     position: absolute;
+}
+
+
+#dn
+{
+     width: 500px;
+     margin-top: 337px;
+     margin-left: 457px;
+     font-size: 40px;
+     color: cyan;
+     position: absolute;
+}
+
+
+
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+
+
+           
+
+ <div class="left" id="left">
+
+     <video autoplay controls muted width="830px" height="500px" id="vid1" >
+          <source src="video/main-theme.webm" type="video/webm">
+          
+        Your browser does not support the video tag.
+        </video>   
+  
+
+        <h2 class="wec" id="nw">CHOOSE THEME</h2>       
+     <h2 class="wec" id="wec">BLOCK BREAKER </h2>
+<h2 class="wec" id="wc">HELP MENU</h2>
+
+
+
+<audio autoplay loop id="audion">
+        
+     <source src="music/game1.m4a" type="audio/mpeg">
+     Your browser does not support the audio element.
+   </audio>
+      
+   <audio autoplay  loop id="main">
+        
+     <source src="music/maindraw.wav" type="audio/mpeg">
+     Your browser does not support the audio element.
+   </audio>   
+
+  
+<img src="img/brkrblk.jpg" alt="" id="mainback1">
+<img src="img/back3.jpg" alt="" id="mainback">
+<img src="img/lives.png" alt="" id="life">
+<img src="img/brick.png" alt="" id="brick">
+<img src="img/brkrblk.jpg" alt="" id="backnew">
+<img src="img/paddle.png" alt="" id="paddle">
+<img src="img/ball.png" alt="" id="ball">
+<img src="img/round3.jpg" alt="" id="rd1">
+<img src="img/round5.jpg" alt="" id="rd2">
+<img src="img/white.png" alt="" id="wbrick">
+<img src="img/yellow.png" alt="" id="ybrick">
+<img src="img/deepbrown.png" alt="" id="bbrick">
+<img src="img/grey1.png" alt="" id="gbrick">
+<img src="img/black.png" alt="" id="blbrick">
+<img src="img/brownblock1.png" alt="" id="brblock">
+<img src="img/cartback1.jpg" alt="" id="back1">
+
+<button class=" btn btn-success btn-lg b1 text-center" id="e"   onclick="playnow(this.id)"><img src="img/easy.png"/>&nbsp;EASY</button>
+<button class=" btn btn-primary btn-lg b2 text-center" id="m"  onclick="playnow(this.id)"><img src="img/medium.png"/>&nbsp;MEDIUM</button>
+<button class=" btn btn-warning btn-lg b2 text-center" id="h"  onclick="playnow(this.id)" ><img src="img/hard.png"/>&nbsp;HARD</button>
+<button class=" btn btn-success btn-lg b1 text-center" id="E"   onclick="playnow(this.id)"><img src="img/easymario.png"/>&nbsp;EASY</button>
+<button class=" btn btn-primary btn-lg b2 text-center" id="M"  onclick="playnow(this.id)"><img src="img/medmario.png"/>&nbsp;MEDIUM</button>
+<button class=" btn btn-warning btn-lg b2 text-center" id="H"  onclick="playnow(this.id)" ><img src="img/hardmario.png"/>&nbsp;HARD</button>
+
+<button class=" btn btn-danger btn-lg b1 text-center"  id="j" onclick="rules()" >RULES OF THE GAME</button>
+<button class=" btn btn-secondary btn-lg b2 text-center"  id="d" onclick="demo()" >WATCH DEMO</button>
+<button class=" btn btn-info btn-lg b2 text-center"  id="bk" onclick="back()" >MAIN MENU</button>     
+<button class=" btn btn-info btn-lg b2 text-center"  id="bk1" onclick="back()" >MAIN MENU</button>     
+
+<button class=" btn btn-success btn-lg  text-center" id="st"  value="mt" onclick="playgame(this.value)" >Main Theme</button>
+<button class=" btn btn-primary btn-lg  text-center" id="st1" value="mr" onclick="playgame(this.value)" >Mario Theme</button>
+
+  
+
+
+
+
+<div class="sidenav" id="sidenav">
+     
+     <a href="#" id="pus" onclick="pause()">PAUSE</a>
+     <a href="#" id="mus" onclick="stopmusic(this.id)">STOP MUSIC</a>
+      <a href="#" id="res" onclick="reset()">QUIT GAME</a>
+      <a href="#" id="tes" onclick="tchange()">CHANGE THEME</a>
+     <a href="#" id="about" onclick="abt()">ABOUT</a>
+     <a href="#" id="help" onclick="disphelp()" >HELP</a>
+</div>
+
+
+
+</div>    
+
+
+<canvas id="myCanvas"  width="920px" height="620px" style=" border: 1px solid black;">
+     Your browser does not support the canvas tag.
+     
+</canvas>
+
+<div class="b1" id="dn"></div>
+<div id="barcv">
+<div class="progress" >
+<div class="progress-bar progress-bar-striped" id="bar" role="progressbar"  aria-valuemin="0" aria-valuemax="100">
+
+     
+          
+     
+
+
+<script type="text/javascript" src="js/draw.js" ></script>	
+
+
+</body>
+</html>
