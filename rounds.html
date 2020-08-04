@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+	
+<head>
+
+<style type="text/css">
+    
+
+
+
+
+
+.wec {
+  width: 300px;
+  height: 100px;
+  margin-left: 510px;
+  text-shadow: 0 3px gray;
+  position: relative;
+  animation: myfirst 4s linear 2s infinite alternate;
+}
+
+@keyframes myfirst {
+  0%   {color:red; left:0px; top:0px;}
+  25%  {color:yellow; left:40px; top:0px;}
+  50%  {color:blue; left:-40px; top:0px;}
+  75%  {color:green; left:60px; top:0px;}
+  100% {color:red; left:0px; top:0px;}
+}
+
+
+
+
+
+
+.left
+{
+     float: left;
+     position: absolute;
+}
+
+
+.strt
+{
+
+     height: 100px;
+     width: 200px;
+}
+
+.b1
+{
+     margin-left: 566px;
+     margin-top: 70px;
+     height: 50px;
+     width: 200px;
+}
+
+.b2
+{
+     margin-left: 566px;
+     margin-top: 20px;
+     height: 50px;
+     width: 200px;
+}
+
+body
+{
+     background-image: url("img/back5.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+
+
+
+
+#life,#brick,#paddle,#ball,#back1,#rd2,#rd3,#rd4,#rd5,#disp,#mainback,#mar1,#mar2,#mar3,#mar4,#mar5,#marmush1,#marmush2
+{
+     display: none;
+}
+
+#about,#help,#mario6,#rd6,#paddle1,#mus
+{
+     display: none;
+}
+
+
+
+#myCanvas
+{
+    
+     background-size: cover;
+     background-repeat: no-repeat;
+     margin-left: 300px;
+}
+
+#pus,#e,#bk,#m,#h,#E,#M,#H,#j,#wec,#backnew,#wbrick,#ybrick,#bbrick,#gbrick,#blbrick,#brblock,#yblock,#blblock,#pblock,#margame,#mainback1,#res
+{
+display:none;
+}
+
+
+
+button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px gray;
+}
+
+.bt
+{
+     margin-top: 20px;
+}
+
+
+.sidenav 
+{
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-image: url("img/bacwhole.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  padding-top: 20px;
+  text-shadow:0 2px hotpink;
+}
+
+.sidenav a 
+{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover 
+{
+  color: #f1f1f1;
+}
+
+
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+
+
+
+ <div class="left">
+  <h2 class="wec" id="wec">BLOCK BREAKER </h2>
+
+<audio loop id="audion">
+        
+     <source src="music/game1.m4a" type="audio/mpeg">
+     Your browser does not support the audio element.
+   </audio>
+      
+   <audio loop id="audio2">
+        
+    <source src="music/round2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <audio loop id="audio3">
+       
+    <source src="music/round3.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <audio loop id="audio4">
+       
+    <source src="music/round4.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio loop id="audio5">
+       
+    <source src="music/round5.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+
+  <audio loop id="audiomario1">
+        
+    <source src="music/mario1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+     
+  <audio loop id="audiomario2">
+       
+   <source src="music/mario2.mp3" type="audio/mpeg">
+   Your browser does not support the audio element.
+ </audio>
+
+ <audio loop id="audiomario3">
+      
+   <source src="music/mario3.mp3" type="audio/mpeg">
+   Your browser does not support the audio element.
+ </audio>
+
+ <audio loop id="audiomario4">
+      
+   <source src="music/mario4.mp3" type="audio/mpeg">
+   Your browser does not support the audio element.
+ </audio>
+ <audio loop id="audiomario5">
+      
+   <source src="music/mario5.mp3" type="audio/mpeg">
+   Your browser does not support the audio element.
+ </audio>
+     
+ <audio autoplay loop id="main">
+        
+  <source src="music/maindraw.wav" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+<img src="img/back5.jpg" alt="" id="mainback1">
+<img src="img/back3.jpg" alt="" id="mainback">
+<img src="img/back6.jpg" alt="" id="rd6">  
+<img src="img/lives.png" alt="" id="life">
+<img src="img/brick.png" alt="" id="brick">
+<img src="img/brkrblk.jpg" alt="" id="backnew">
+<img src="img/paddle.png" alt="" id="paddle">
+<img src="img/paddle1.png" alt="" id="paddle1">
+<img src="img/ball.png" alt="" id="ball">
+<img src="img/cartback1.jpg" alt="" id="back1">
+<img src="img/cartback2.jpg" alt="" id="rd2">
+<img src="img/cartback3.jpg" alt="" id="rd3">
+<img src="img/cartback4.jpg" alt="" id="rd4">
+<img src="img/cartback5.jpg" alt="" id="rd5">
+<img src="img/white.png" alt="" id="wbrick">
+<img src="img/yellow.png" alt="" id="ybrick">
+<img src="img/deepbrown.png" alt="" id="bbrick">
+<img src="img/grey1.png" alt="" id="gbrick">
+<img src="img/black.png" alt="" id="blbrick">
+<img src="img/mario1.jpg" alt="" id="mar1">
+<img src="img/mario2.jpg" alt="" id="mar2">
+<img src="img/mario3.jpg" alt="" id="mar3">
+<img src="img/mario4.jpg" alt="" id="mar4">
+<img src="img/mario6.jpg" alt="" id="mar5">
+<img src="img/mario5.png" alt="" id="mario6">
+<img src="img/brownmushroom1.png" alt="" id="marmush1">
+<img src="img/blackmushroom.png" alt="" id="marmush2">
+<img src="img/brownblock1.png" alt="" id="brblock">
+<img src="img/yellowblock1.png" alt="" id="yblock">
+<img src="img/blueblock.png" alt="" id="blblock">
+<img src="img/powerblock1.png" alt="" id="pblock">
+<img src="img/mariogame.jpg" alt="" id="margame">
+
+<div class="sidenav">
+     
+     <a href="#" id="pus" onclick="pause()">PAUSE</a>
+     <a href="#" id="mus" >STOP MUSIC</a>
+      <a href="#" id="res" onclick="reset()">QUIT GAME</a>
+      <a href="#" id="tes" onclick="tchange()">CHANGE THEME</a>
+     <a href="#" id="about">About</a>
+     <a href="#" id="help"  >HELP</a>
+
+   </div>
+   <button class=" btn btn-success btn-lg b1 text-center" id="e"   onclick="playnow(this.id)"><img src="img/easy.png"/>&nbsp;EASY</button>
+<button class=" btn btn-primary btn-lg b2 text-center" id="m"  onclick="playnow(this.id)"><img src="img/medium.png"/>&nbsp;MEDIUM</button>
+<button class=" btn btn-warning btn-lg b2 text-center" id="h"  onclick="playnow(this.id)" ><img src="img/hard.png"/>&nbsp;HARD</button>
+<button class=" btn btn-success btn-lg b1 text-center" id="E"   onclick="playnow(this.id)"><img src="img/easymario.png"/>&nbsp;EASY</button>
+<button class=" btn btn-primary btn-lg b2 text-center" id="M"  onclick="playnow(this.id)"><img src="img/medmario.png"/>&nbsp;MEDIUM</button>
+<button class=" btn btn-warning btn-lg b2 text-center" id="H"  onclick="playnow(this.id)" ><img src="img/hardmario.png"/>&nbsp;HARD</button>
+<button class=" btn btn-info btn-lg b2 text-center"  id="bk" onclick="reset()" >MAIN MENU</button>     
+
+   <button class=" btn btn-danger btn-lg b2 text-center"  id="j" onclick="rules()" >RULES OF THE GAME</button>
+   <h2 class="wec" id="wec">BLOCK BREAKER </h2>  
+</div>    
+
+<p class="disp" id="disp"></p>
+
+<canvas id="myCanvas" width="920px" height="620px" style=" border: 1px solid black;">
+     Your browser does not support the canvas tag.
+     </canvas>
+     
+          
+     
+
+
+<script type="text/javascript" src="js/draw.js" onload="nextnow(1)"></script>	
+
+
+</body>
+</html>
